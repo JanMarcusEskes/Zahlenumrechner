@@ -169,41 +169,40 @@ namespace Zahlenumrechner
       }
       return liErgebnis;
     }
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <param name="args"></param>
+
+
+
     static void Main(string[] args)
     {
       while (true)
       {
-        //Einlesen
         Console.Clear();
-        Console.Title = "title Zahlen umrechner";
-        Console.WriteLine("IN Welches Zahlensystem wollen Sie konvertieren?\n1. Hexadezimal\n2. Dezimal\n3. Oktal\n4. Binaer\nZum auswaehlen das gewuenschte System eingeben.\nZum beenden tippen Sie einfach 'exit' ein.\nEingabe: ");
+        //Einlesen
+        Console.Title = "Zahlen umrechner";
+        Console.WriteLine("IN Welches Zahlensystem wollen Sie konvertieren?\n1. Hexadezimal\n2. Dezimla\n3. Oktal\n4. Binaer\nZum auswaehlen das gewuenschte System eingeben.\nZum beenden tippen Sie einfach 'exit' oder 'x' ein.\nEingabe: ");
         string lsMenu;
-        lsMenu = Console.ReadLine();
-        if (lsMenu == "exit")
+        lsMenu = Console.ReadLine().ToUpper();
+        if (lsMenu == "EXIT" || lsMenu == "X")
         {
           return;
         }
         Console.Clear();
         Console.WriteLine("AUS welchem Zahlensystem soll konvertiert werden?\n1. Hexadezimal\n2. Dezimal\n3. Oktal\n4. Binaer\nZum auswaehlen das gewuenschte System eingeben.\nEingabe: ");
         string lsMenu0;
-        lsMenu0 = Console.ReadLine();
-        if (lsMenu == "dezimal")
+        lsMenu0 = Console.ReadLine().ToUpper();
+        if (lsMenu == "DEZIMAL" || lsMenu == "2")
         {
-          if (lsMenu0 == "exit")
+          if (lsMenu0 == "EXIT" || lsMenu0 == "X")
           {
             return;
           }
-          if (lsMenu0 == "dezimal")
+          if (lsMenu0 == "DEZIMAL" || lsMenu0 == "2")
           {
             Console.Clear();
             Console.WriteLine("Das ist unnoetig!\n");
             Console.Read();
           }
-          else if (lsMenu0 == "hexadezimal")
+          else if (lsMenu0 == "HEXADEZIMAL" || lsMenu0 == "1")
           {
             Console.Clear();
             Console.WriteLine("Sie wandeln in Dezimal um.\nGeben Sie nun die Zahl ein.\nZahl: ");
@@ -216,7 +215,7 @@ namespace Zahlenumrechner
             Console.ReadLine();
 
           }
-          else if (lsMenu0 == "oktal")
+          else if (lsMenu0 == "OKTAL" || lsMenu0 == "3")
           {
             Console.Clear();
             Console.WriteLine("Sie wandeln in Dezimal um.\nGeben Sie nun die Zahle ein.\nZahl: ");
@@ -228,10 +227,10 @@ namespace Zahlenumrechner
             Console.WriteLine('\n');
             Console.ReadLine();
           }
-          else if (lsMenu0 == "binaer")
+          else if (lsMenu0 == "BINAER" || lsMenu0 == "4")
           {
             Console.Clear();
-            Console.WriteLine("Sie wandeln in Dezimal um.\nGeben Sie nun die Zahle ein.\nZahl: ");
+            Console.WriteLine("Sie wandeln in DEZIMAL um.\nGeben Sie nun die Zahle ein.\nZahl: ");
             int lEingabe = 0;
             int.TryParse(Console.ReadLine(), out lEingabe);
             int lAusgabe = BinToDez(lEingabe);
@@ -241,21 +240,21 @@ namespace Zahlenumrechner
             Console.ReadLine();
           }
         }
-        else if (lsMenu == "hexadezimal")
+        else if (lsMenu == "HEXADEZIMAL" || lsMenu == "1")
         {
-          if (lsMenu0 == "exit")
+          if (lsMenu0 == "EXIT" || lsMenu0 == "X")
           {
             return;
           }
-          if (lsMenu0 == "hexadezimal")
+          if (lsMenu0 == "HEXADEZIMAL" || lsMenu0 == "1")
           {
             Console.Clear();
             Console.WriteLine("Das ist unnoetig!\n");
             Console.ReadLine();
           }
-          else if (lsMenu0 == "dezimal")
+          else if (lsMenu0 == "DEZIMAL" || lsMenu0 == "2")
           {
-            Console.ReadLine();
+            Console.Clear();
             Console.WriteLine("Sie wandeln in Hexadezimal um.\nGeben Sie nun die Zahl ein.\nZahl: ");
             int lEingabe = 0;
             int.TryParse(Console.ReadLine(), out lEingabe);
@@ -264,10 +263,11 @@ namespace Zahlenumrechner
             Console.WriteLine("Ergebnis: " + lAusgabe);
             Console.WriteLine('\n');
             Console.ReadLine();
+
           }
-          else if (lsMenu0 == "oktal")
+          else if (lsMenu0 == "OKTAL" || lsMenu0 == "3")
           {
-            Console.ReadLine();
+            Console.Clear();
             Console.WriteLine("Sie wandeln in Hexadezimal um.\nGeben Sie nun die Zahl ein.\nZahl: ");
             int lEingabe = 0;
             int.TryParse(Console.ReadLine(), out lEingabe);
@@ -278,9 +278,9 @@ namespace Zahlenumrechner
             Console.WriteLine('\n');
             Console.ReadLine();
           }
-          else if (lsMenu0 == "binaer")
+          else if (lsMenu0 == "BINAER" || lsMenu0 == "4")
           {
-            Console.ReadLine();
+            Console.Clear();
             Console.WriteLine("Sie wandeln in Hexadezimal um.\nGeben Sie nun die Zahl ein.\nZahl: ");
             int lEingabe = 0;
             int.TryParse(Console.ReadLine(), out lEingabe);
@@ -292,19 +292,19 @@ namespace Zahlenumrechner
             Console.ReadLine();
           }
         }
-        else if (lsMenu == "oktal")
+        else if (lsMenu == "OKTAL" || lsMenu == "3")
         {
-          if (lsMenu0 == "exit")
+          if (lsMenu0 == "EXIT" || lsMenu0 == "X")
           {
             return;
           }
-          if (lsMenu0 == "oktal")
+          if (lsMenu0 == "OKTAL" || lsMenu0 == "3")
           {
             Console.Clear();
             Console.WriteLine("Das ist unnoetig!\n");
             Console.ReadLine();
           }
-          else if (lsMenu0 == "dezimal")
+          else if (lsMenu0 == "DEZIMAL" || lsMenu0 == "2")
           {
             Console.Clear();
             Console.WriteLine("Sie wandeln in Oktal um.\nGeben Sie nun die Zahle ein.\nZahl: ");
@@ -316,7 +316,7 @@ namespace Zahlenumrechner
             Console.WriteLine('\n');
             Console.ReadLine();
           }
-          else if (lsMenu0 == "hexadezimal")
+          else if (lsMenu0 == "HEXADEZIMAL" || lsMenu0 == "1")
           {
             Console.Clear();
             Console.WriteLine("Sie wandeln in Oktal um.\nGeben Sie nun die Zahl ein.\nZahl: ");
@@ -329,7 +329,7 @@ namespace Zahlenumrechner
             Console.WriteLine('\n');
             Console.ReadLine();
           }
-          else if (lsMenu0 == "binaer")
+          else if (lsMenu0 == "BINAER" || lsMenu0 == "4")
           {
             Console.Clear();
             Console.WriteLine("Sie wandeln in Oktal um.\nGeben Sie nun die Zahl ein.\nZahl: ");
@@ -343,19 +343,19 @@ namespace Zahlenumrechner
             Console.ReadLine();
           }
         }
-        else if (lsMenu == "binaer")
+        else if (lsMenu == "BINAER" || lsMenu == "4")
         {
-          if (lsMenu0 == "exit")
+          if (lsMenu0 == "EXIT" || lsMenu0 == "X")
           {
             return;
           }
-          else if (lsMenu0 == "binaer")
+          else if (lsMenu0 == "BINAER" || lsMenu0 == "4")
           {
             Console.Clear();
             Console.WriteLine("Das ist unnoetig!\n");
             Console.ReadLine();
           }
-          else if (lsMenu0 == "dezimal")
+          else if (lsMenu0 == "DEZIMAL" || lsMenu0 == "2")
           {
             Console.Clear();
             Console.WriteLine("Sie wandeln in Binaer um.\nGeben Sie nun die Zahle ein.\nZahl: ");
@@ -367,7 +367,7 @@ namespace Zahlenumrechner
             Console.WriteLine('\n');
             Console.ReadLine();
           }
-          else if (lsMenu0 == "hexadezimal")
+          else if (lsMenu0 == "HEXADEZIMAL" || lsMenu0 == "1")
           {
             Console.Clear();
             Console.WriteLine("Sie wandeln in Binaer um.\nGeben Sie nun die Zahl ein.\nZahl: ");
@@ -380,7 +380,7 @@ namespace Zahlenumrechner
             Console.WriteLine('\n');
             Console.ReadLine();
           }
-          else if (lsMenu0 == "oktal")
+          else if (lsMenu0 == "OKTAL" || lsMenu0 == "3")
           {
             Console.Clear();
             Console.WriteLine("Sie wandeln in Binaer um.\nGeben Sie nun die Zahl ein.\nZahl: ");
@@ -394,19 +394,13 @@ namespace Zahlenumrechner
             Console.ReadLine();
           }
         }
-        else if (lsMenu0 == "exit")
+        else if (lsMenu0 == "EXIT" || lsMenu0 == "X")
         {
           return;
         }
-        else if (lsMenu != "dezimal" && lsMenu != "hexadezimal" && lsMenu != "binaer" && lsMenu != "oktal" && lsMenu != "exit")
+        else
         {
-          Console.ReadLine();
-          Console.WriteLine("Das von Ihnen eingegebene Zahlensystem wird leider nicht unterstuetzt.\n");
-          Console.ReadLine();
-        }
-        if (lsMenu0 != "dezimal" && lsMenu0 != "hexadezimal" && lsMenu0 != "binaer" && lsMenu0 != "oktal" && lsMenu0 != "exit")
-        {
-          Console.ReadLine();
+          Console.Clear();
           Console.WriteLine("Das von Ihnen eingegebene Zahlensystem wird leider nicht unterstuetzt.\n");
           Console.ReadLine();
         }
