@@ -69,7 +69,6 @@ namespace Zahlenumrechner
       //Umrechnung
       int liRest;
       int i = 0;
-      int j = 0;
       int liZwichenrechnung = 1;
       int[] liErgebnis = new int[100];
       string lsAusgabe = "";
@@ -122,7 +121,6 @@ namespace Zahlenumrechner
       //Umrechnung
       int liRest;
       int i = 0;
-      int j = 0;
       int liZwichenrechnung = 1;
       int[] liErgebnis = new int[100];
       string lsAusgabe = "";
